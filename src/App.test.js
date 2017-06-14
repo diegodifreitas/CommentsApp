@@ -4,7 +4,7 @@ import App from './App'
 
 describe('<App />', () => {
   const base = {
-    syncState: jest.fn(0)
+    syncState: jest.fn()
   }
   it('renders without crashing', () => {
     const wrapper = shallow(<App base={base} />)
@@ -24,12 +24,13 @@ describe('<App />', () => {
   })
   it('adds a new comment to state when postNewComment', () => {
     const wrapper = mount(<App base={base} />)
-    wrapper.instance().postNewComment({ comment: 'test-1'})
-    wrapper.instance().postNewComment({ comment: 'test-2'})
-    wrapper.instance().postNewComment({ comment: 'test-3'})
+    wrapper.instance().postNewComment({ comment: 'test-1' })
+    wrapper.instance().postNewComment({ comment: 'test-2' })
+    wrapper.instance().postNewComment({ comment: 'test-3' })
+
     const comments = Object.keys(wrapper.instance().state.comments)
     expect(comments.length).toBe(3)
-})
+  })
   /*  it('outputs the <App/>', () => {
       const wrapperShallow = shallow(<App />)
       const wrapperMount = mount(<App />)
