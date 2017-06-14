@@ -1,27 +1,26 @@
 import React, { Component } from 'react'
+import 'bootstrap-css-only'
 
 import Comments from './Comments'
 import NewComment from './NewComment'
-import 'bootstrap-css-only'
+import base from './base'
 
 class App extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      comments: {
-        1: {
-          comment: 'first comment'
-        },
-        2: {
-          comment: 'second commet'
-        }
-      }
-    }
     this.postNewComment = this.postNewComment.bind(this)
+    this.state = {
+      comments: { }
+    }
+
+    this.refComments = base.syncState('comments', {
+      context: this,
+      state: 'comments'
+    })
   }
   postNewComment(comment) {
-    const comments = {...this.state.comments}
+    const comments = { ...this.state.comments }
     const timestamp = Date.now()
     comments[`comm-${timestamp}`] = comment
     this.setState({

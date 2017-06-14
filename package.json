@@ -4,11 +4,15 @@
   "private": true,
   "dependencies": {
     "bootstrap-css-only": "^3.3.7",
+    "firebase": "^4.1.2",
+    "re-base": "^3.0.1",
     "react": "^15.6.0",
     "react-dom": "^15.6.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "enzyme": "^2.8.2",
+    "react-scripts": "1.0.7",
+    "react-test-renderer": "^15.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
