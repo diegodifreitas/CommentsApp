@@ -8,6 +8,6 @@ describe('<Comment />', () => {
         const wrapper = shallow(<Comment comment={comment} />)
         expect(wrapper.length).toBe(1)
         expect(wrapper.text()).toBe(comment.comment)
-         expect(wrapper.is('.well')).toBe(true)
+        expect(wrapper.is('.well')).toBe(true)
     })
 })

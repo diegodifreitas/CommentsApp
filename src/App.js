@@ -32,7 +32,7 @@ class App extends Component {
         <NewComment postNewComment={this.postNewComment} />
         <Comments comments={this.state.comments} />
       </div>
-    );
+    )
   }
 }
 
