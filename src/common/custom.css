@@ -9,3 +9,12 @@
 .main-sidebar{
         position: fixed;
 }
+
+.direct-chat-messages{
+    height: 350px
+}
+
+.text-area{
+    width: 100% !important;
+    height: 100px !important;
+}

@@ -16,7 +16,7 @@ export default props => (
                     <li className="messages-menu">
 
                         {props.isLoggedIn &&
-                            <a onClick={() => props.auth.signOut()} className="dropdown-toggle" data-toggle="dropdown">
+                            <a href='/#/' onClick={() => props.auth.signOut()} className="dropdown-toggle" data-toggle="dropdown">
                                 <i className="fa fa-facebook-official"></i> <span> Deslogar</span>
                             </a>
                         }

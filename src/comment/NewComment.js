@@ -21,7 +21,7 @@ class NewComment extends Component {
                     <div className="input-group">
                         <textarea
                             ref='comment'
-                            className='form-control'
+                            className='form-control text-area'
                             placeholder='Comente!'
                             onKeyDown={this.handleEnter} />
      
