@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class NewComment extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.handleEnter = this.handleEnter.bind(this)
     }
@@ -16,13 +16,19 @@ class NewComment extends Component {
     }
     render() {
         return (
-            <div className='row'>
-                <textarea
-                    ref='comment'
-                    className='form-control'
-                    placeholder='Comente!'
-                    onKeyDown={this.handleEnter} />
+            <div className="box-footer">
+                <form action="#" method="post">
+                    <div className="input-group">
+                        <textarea
+                            ref='comment'
+                            className='form-control'
+                            placeholder='Comente!'
+                            onKeyDown={this.handleEnter} />
+     
+                    </div>
+                </form>
             </div>
+
         )
     }
 }

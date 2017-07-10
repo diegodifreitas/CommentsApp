@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import App from './main/App';
 import registerServiceWorker from './registerServiceWorker';
-import base from './base'
+import base, { auth, providers } from './main/base'
 
-ReactDOM.render(<App base={base} />, document.getElementById('root'));
+ReactDOM.render(<App base={base} auth={auth} providers={providers} />, document.getElementById('root'));
 registerServiceWorker();

@@ -1,0 +1,11 @@
+.input-group{
+    width: 100%
+}
+.main-footer {
+    position: fixed;
+    bottom:0px;
+    width:100%;
+}
+.main-sidebar{
+        position: fixed;
+}
