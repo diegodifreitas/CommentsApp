@@ -53,11 +53,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className='wrapper'>
-          <Header auth={this.props.auth} isLoggedIn={this.state.isLoggedIn} />
-          <Menu user={this.state.user} isLoggedIn={this.state.isLoggedIn} />
-          <div className='content-wrapper'>
+      <div className='wrapper'>
+        <Header auth={this.props.auth} isLoggedIn={this.state.isLoggedIn} />
+        <Menu user={this.state.user} isLoggedIn={this.state.isLoggedIn} />
+        <div className='content-wrapper'>
+          <section className='content'>
             <div className="box direct-chat">
               <div className="box-header">
                 <h3 className="box-title">Direct Chat</h3>
@@ -67,15 +67,15 @@ class App extends Component {
                 <NewComment postNewComment={this.postNewComment} />
               }
               {!this.state.isLoggedIn &&
-                <div className="callout callout-warnning">
+                <div className="callout callout-danger">
                   <h4>Conecte-se!</h4>
                   <p>Entre com a sua conta do facebook para comentar</p>
                   <button className='btn btn-default' onClick={() => this.auth('facebook')}> Conectar </button>
                 </div>
               }
             </div>
-          </div>
-        </div >
+          </section>
+        </div>
         <Footer />
       </div>
     )

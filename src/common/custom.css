@@ -2,16 +2,14 @@
     width: 100%
 }
 .main-footer {
-    position: fixed;
-    bottom:0px;
     width:100%;
 }
 .main-sidebar{
-        position: fixed;
+    position: fixed;
 }
 
 .direct-chat-messages{
-    height: 350px
+    height: 64vh
 }
 
 .text-area{
